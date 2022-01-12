@@ -1,9 +1,9 @@
 
 <reference types="cypress" />
 
-describe('Our first suite', () => {
+describe('First suite', () => {
 
-    it('first test', () => {
+    it('Test1', () => {
 
         cy.visit('/')
         cy.contains('Forms').click()
