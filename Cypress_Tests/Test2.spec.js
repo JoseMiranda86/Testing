@@ -1,9 +1,9 @@
 
-/// <reference types="cypress" />
+<reference types="cypress" />
 
 describe('Second suite', () => {
 
-    it('Test2', () => {
+    it('Test1', () => {
 
         cy.visit('/')
         cy.contains('Forms').click()
@@ -25,7 +25,7 @@ describe('Second suite', () => {
 
     })
 
-    it.only('Test2.1', () => {
+    it.only('Test2', () => {
 
         cy.visit('/')
         cy.contains('Forms').click()
