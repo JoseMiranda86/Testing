@@ -27,13 +27,6 @@ describe('Test with backend', () => {
 
     it.only('delete a new article', () => {
 
-        const userCredentials = {
-            "user": {
-                "email": "User1@mail.com",
-                "password": "TestAccount1"
-            }
-        }
-
         const bodyRequest = {
             "article": {
                 "tagList": [],
@@ -43,9 +36,7 @@ describe('Test with backend', () => {
             }
         }
 
-        cy.request('POST', 'https://conduit.productionready.io/api/users/login', userCredentials)
-        .its('body').then( body => {
-            const token = body.user.token
+        cy.get('@token').then( token => {
 
             cy.request({
                 url:'https://conduit.productionready.io/api/articles',
