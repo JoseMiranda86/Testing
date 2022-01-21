@@ -25,6 +25,13 @@ describe('Test with backend', () => {
         })
     })
 
+    it('should have tags with routing object', () => {
+      cy.get('.tag-list')
+        .should('contain', 'tag1')
+        .and('contain', 'tag2')
+        .and('contain', 'tag3')
+    })
+
     it.only('delete a new article', () => {
 
         const bodyRequest = {
